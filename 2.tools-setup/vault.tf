@@ -22,14 +22,15 @@ server:
         nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       hosts:
       - host: "dev-vault.${var.google_domain_name}"
-        paths: 
-        - pathType: Prefix
-          path: "/"
-          backend:
-            service:
-              name: vault
-              port:
-                number: 8200
+        http:
+          paths: 
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: vault
+                port:
+                  number: 8200
       tls:
        - secretName: vault-tls
          hosts:
