@@ -14,7 +14,8 @@ module "argo-terraform-helm" {
 
 
 server:
-  ingress:e
+  ingress:
+    enabled: true
     annotations: 
       ingress.kubernetes.io/ssl-redirect: "true"
       kubernetes.io/ingress.class: nginx
