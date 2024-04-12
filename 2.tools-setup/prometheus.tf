@@ -14,10 +14,9 @@ module "prometheus-terraform-helm" {
   values_yaml          = <<EOF
 
 server:
-  enabled: true
   ingress:
     enabled: true
-  annotations:
+    annotations:
       ingress.kubernetes.io/ssl-redirect: "false"
       kubernetes.io/ingress.class: nginx
       cert-manager.io/cluster-issuer: letsencrypt-dev
