@@ -7,5 +7,3 @@ backend.tf
 
 2.cluster_setup/backend.tf
 /home/projectakhasanov/project_infrastructure/2.cluster_setup/backend.tf
-
-vault-token.*
